@@ -4,8 +4,11 @@
     <title>This is the title of the webpage!</title>
   </head>
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-    <script>console.log('99999999999999999');</script>
+    <p id ='some-p'>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <script>
+      const p = document.getElementById('some-p');
+      p.innerHTML = '9999999999999999999'
+    </script>
 
 </body>
 </html>
