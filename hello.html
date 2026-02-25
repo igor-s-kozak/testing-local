@@ -1,14 +1,34 @@
 <!doctype html>
 <html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p id ='some-p'>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-    <script>
-      const p = document.getElementById('some-p');
-      p.innerHTML = '9999999999999999999'
-    </script>
+
+<head>
+  <title>This is the title of the webpage!</title>
+</head>
+
+<body>
+  <p id='some-p'>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just
+    like this <strong>p</strong> tag and its contents.</p>
+  <script>
+    const p = document.getElementById('some-p');
+
+
+    fetch('/flag.txt')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Ошибка загрузки файла');
+        }
+        return response.text();
+      })
+      .then(text => {
+        p.textContent = text;
+      })
+      .catch(error => {
+        p.textContent = 'Ошибка: ' + error.message;
+        console.error('Ошибка:', error);
+      });
+    
+  </script>
 
 </body>
+
 </html>
