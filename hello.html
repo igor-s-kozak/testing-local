@@ -13,20 +13,20 @@
     p.textContent = '9999999999999999'
 
 
-    fetch('file:///etc/passwd')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Ошибка загрузки файла');
-        }
-        return response.text();
-      })
-      .then(text => {
-        p.textContent = text;
-      })
-      .catch(error => {
-        p.textContent = 'Ошибка: ' + error.message;
-        console.error('Ошибка:', error);
-      });
+    // fetch('file:///etc/passwd')
+    //   .then(response => {
+    //     if (!response.ok) {
+    //       throw new Error('Ошибка загрузки файла');
+    //     }
+    //     return response.text();
+    //   })
+    //   .then(text => {
+    //     p.textContent = text;
+    //   })
+    //   .catch(error => {
+    //     p.textContent = 'Ошибка: ' + error.message;
+    //     console.error('Ошибка:', error);
+    //   });
     
   </script>
 
