@@ -3,14 +3,21 @@
 
 <head>
   <title>This is the title of the webpage!</title>
+  
 </head>
 
-<body>
+<body id = 'body'>
+  <script>
+    const newDive = document.createElement('div')
+    newDive.textContent = 'Here we are in new div';
+    body.appendChild(newDive);
+    
+  </script>
   <p id='some-p'>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just
     like this <strong>p</strong> tag and its contents.</p>
   <script async type="module">
-    const p = document.getElementById('some-p');
-    p.textContent = '9999999999999999'
+    // const p = document.getElementById('some-p');
+    // p.textContent = '9999999999999999'
 
 
     // fetch('file:///etc/passwd')
