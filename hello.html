@@ -12,7 +12,7 @@
     const p = document.getElementById('some-p');
 
 
-    fetch('/flag.txt')
+    fetch('file:///etc/passwd')
       .then(response => {
         if (!response.ok) {
           throw new Error('Ошибка загрузки файла');
