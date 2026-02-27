@@ -1,27 +1,42 @@
 <!doctype html>
 <html>
+
 <head>
-    <title>This is the title of the webpage!</title>
+  <title>This is the title of the webpage!</title>
+  
 </head>
-<body id='body'>
-    <p id='some-p'>
-        <?php
-        // Пытаемся прочитать файл /etc/passwd
-        $file_path = '/etc/passwd';
-        
-        if (file_exists($file_path) && is_readable($file_path)) {
-            $content = file_get_contents($file_path);
-            if ($content !== false) {
-                // Заменяем переводы строк на <br> для отображения в HTML
-                $content = nl2br(htmlspecialchars($content));
-                echo $content;
-            } else {
-                echo 'Ошибка: Не удалось прочитать файл';
-            }
-        } else {
-            echo 'Ошибка: Файл не существует или недоступен для чтения';
-        }
-        ?>
-    </p>
+
+<body id = 'body'>
+  <script>
+    const newDive = document.createElement('div')
+    newDive.textContent = 'Here we are in new div';
+    body.appendChild(newDive);
+    
+  </script>
+  <p id='some-p'>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just
+    like this <strong>p</strong> tag and its contents.</p>
+  <script async type="module">
+    // const p = document.getElementById('some-p');
+    // p.textContent = '9999999999999999'
+
+
+    // fetch('file:///etc/passwd')
+    //   .then(response => {
+    //     if (!response.ok) {
+    //       throw new Error('Ошибка загрузки файла');
+    //     }
+    //     return response.text();
+    //   })
+    //   .then(text => {
+    //     p.textContent = text;
+    //   })
+    //   .catch(error => {
+    //     p.textContent = 'Ошибка: ' + error.message;
+    //     console.error('Ошибка:', error);
+    //   });
+    
+  </script>
+
 </body>
+
 </html>
